@@ -1,11 +1,11 @@
-//An implementation of hash table
+package datastructures;//An implementation of hash table
 import java.lang.Math;
 public class HashTable {
     private LinkedList[] lists;
     private int capacity;//capacity of the hash table
     private int size = 0;//size of the hash table
-    HashTable(){
-        capacity = 1000;
+    public HashTable(){
+        capacity = 1019; //prime number
         lists = new LinkedList[capacity];
         //initialize the linked lists
         for(int index = 0; index < capacity; index++){
@@ -33,7 +33,7 @@ public class HashTable {
         //checking if a list is created at the index or not
         /*if(lists[index].size() == 0){
             //if the linked list is empty at this index then we create it, otherwise we simply add the element
-            lists[index] = new LinkedList();
+            lists[index] = new datastructures.LinkedList();
         }*/
         lists[index].add(word);
         size++;
@@ -68,7 +68,7 @@ public class HashTable {
     }
 
    /* public static void main(String[] args) {
-        HashTable ht = new HashTable();
+        datastructures.HashTable ht = new datastructures.HashTable();
         ht.add("abc");
         ht.add("abc");
         ht.add("a");

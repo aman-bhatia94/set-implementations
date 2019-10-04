@@ -1,10 +1,14 @@
+package setimplementations;
+
+import datastructures.LinkedList;
+
 /**
  * Set implementation using a singly linked list
  */
 public class SetList implements SetInterface{
     private LinkedList list;
     //initialize a linked list
-    SetList(){
+    public SetList(){
         list = new LinkedList();
     }
     //Searching if the set already contains the given element
@@ -43,7 +47,7 @@ public class SetList implements SetInterface{
     }
     /*public static void main(String[] args){
 
-        SetList setList = new SetList();
+        setimplementations.SetList setList = new setimplementations.SetList();
         setList.displaySet();
         setList.add("abc");
 

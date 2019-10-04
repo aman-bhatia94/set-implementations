@@ -1,9 +1,13 @@
+package setimplementations;
+
+import datastructures.HashTable;
+
 //Implementation of a set using a hash table
 public class SetHashTable implements SetInterface {
 
     private HashTable hashTable;
-    //initialize the HashSet and thus internally the HashTable
-    SetHashTable(){
+    //initialize the HashSet and thus internally the datastructures.HashTable
+    public SetHashTable(){
         hashTable = new HashTable();
     }
 
@@ -30,7 +34,7 @@ public class SetHashTable implements SetInterface {
     }
 
     /*public static void main(String[] args) {
-        SetHashTable set = new SetHashTable();
+        setimplementations.SetHashTable set = new setimplementations.SetHashTable();
         System.out.println(set.size());
         System.out.println(set.contains("aaa"));
         set.add("aaa");

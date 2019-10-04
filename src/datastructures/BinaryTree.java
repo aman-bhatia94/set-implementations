@@ -1,3 +1,5 @@
+package datastructures;
+
 public class BinaryTree {
     private Node root; //root node of the binary search tree
     private int size = 0; //stores the number of nodes in the tree
@@ -79,7 +81,7 @@ public class BinaryTree {
 
     }
    /* public static void main(String[] args){
-        BinaryTree bst = new BinaryTree();
+        datastructures.BinaryTree bst = new datastructures.BinaryTree();
         bst.traverseTree(bst.root);
         System.out.println();
         bst.add("a");

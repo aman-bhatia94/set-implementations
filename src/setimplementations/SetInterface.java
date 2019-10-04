@@ -1,3 +1,5 @@
+package setimplementations;
+
 public interface SetInterface {
     public boolean add(String word);
     public int size();

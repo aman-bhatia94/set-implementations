@@ -1,6 +1,10 @@
+package setimplementations;
+
+import datastructures.BinaryTree;
+
 public class SetTree implements SetInterface{
     private BinaryTree bst;
-    SetTree(){
+    public SetTree(){
         bst = new BinaryTree();
     }
 
@@ -33,7 +37,7 @@ public class SetTree implements SetInterface{
     }
 
     /*public static void main(String[] args) {
-        SetTree set = new SetTree();
+        setimplementations.SetTree set = new setimplementations.SetTree();
         set.displaySet();
         set.add("b");
         set.displaySet();

@@ -1,3 +1,5 @@
+package datastructures;
+
 public class LinkedList {
     private Node head; //To store the head of the list
     private int size = 0; //keeping count of the list size
