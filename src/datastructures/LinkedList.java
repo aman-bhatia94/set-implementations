@@ -36,29 +36,12 @@ public class LinkedList {
     }
     //method to add an element in the list at the head
     public void add(String word){
-        size++;
         Node temp = new Node(word);
         temp.next = this.head;
         this.head = temp;
+        size++;
 
     }
-    /*
-    public void remove(Node head, String word){
-        Node trav = head;
-        if(head == null){
-            System.out.println("List is empty");
-            return;
-        }
-        else if(head.word.equals(word)){
-            this.head = this.head.next;
-            return;
-        }
-        while(trav != null && !trav.next.word.equals(word)){
-            trav = trav.next;
-        }
-        trav.next = trav.next.next;
-    }*/
-
     //method to call the traversal function
     public void display(){
         traverse(this.head);
