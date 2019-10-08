@@ -1,10 +1,9 @@
+/**
+ * Implementation of a set using a Linked List
+ */
 package setimplementations;
-
 import datastructures.LinkedList;
 
-/**
- * Set implementation using a singly linked list
- */
 public class SetList implements SetInterface{
     private LinkedList list;
     //initialize a linked list
@@ -45,24 +44,4 @@ public class SetList implements SetInterface{
         list.display();
         System.out.println();
     }
-    /*public static void main(String[] args){
-
-        setimplementations.SetList setList = new setimplementations.SetList();
-        setList.displaySet();
-        setList.add("abc");
-
-        setList.add("def");
-        setList.displaySet();
-
-        setList.add("def");
-        setList.displaySet();
-
-        setList.add("abc");
-        setList.displaySet();
-
-        setList.add("ghi");
-        setList.displaySet();
-
-        System.out.print(setList.size());
-    }*/
 }

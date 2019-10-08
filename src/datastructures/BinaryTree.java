@@ -1,3 +1,7 @@
+/**
+ * An implementation of Binary Search Tree
+ * Author: Aman Bhatia
+ */
 package datastructures;
 
 public class BinaryTree {
@@ -5,16 +9,23 @@ public class BinaryTree {
     private int size = 0; //stores the number of nodes in the tree
     class Node{
         String word; //value of this node
-        Node left; //left child
-        Node right; //right child
+        Node left; //left child of the node
+        Node right; //right child of the node
         Node(String word){
             this.word = word;
             this.left = null;
             this.right = null;
         }
     }
+    //method to return the size of the tree
     public int size(){
         return size;
+    }
+
+    //method to call the search method on the tree
+    public Node contains(String word){
+
+        return search(this.root,word);
     }
 
     //method to search for a given element in the tree
@@ -31,11 +42,6 @@ public class BinaryTree {
         else{
             return search(trav.right, word);
         }
-    }
-    //method to call the search method on the tree
-    public Node contains(String word){
-
-        return search(this.root,word);
     }
 
     //method to traverse a tree
@@ -80,19 +86,5 @@ public class BinaryTree {
         return root;
 
     }
-   /* public static void main(String[] args){
-        datastructures.BinaryTree bst = new datastructures.BinaryTree();
-        bst.traverseTree(bst.root);
-        System.out.println();
-        bst.add("a");
-        bst.traverseTree(bst.root);
-        System.out.println();
-        bst.add("b");
-        bst.add("d");
-        bst.add("c");
-        bst.traverseTree(bst.root);
-        System.out.print(bst.size());
-
-    }*/
 
 }

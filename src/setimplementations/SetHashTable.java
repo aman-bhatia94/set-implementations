@@ -1,16 +1,19 @@
+/**
+ * Implementation of a set using a Hash Table
+ */
 package setimplementations;
-
 import datastructures.HashTable;
 
 //Implementation of a set using a hash table
 public class SetHashTable implements SetInterface {
 
     private HashTable hashTable;
-    //initialize the HashSet and thus internally the datastructures.HashTable
+    //initialize the Set
     public SetHashTable(){
         hashTable = new HashTable();
     }
 
+    //method to add a word to Hash set
     @Override
     public boolean add(String word) {
         boolean isPresent = hashTable.contains(word);
@@ -21,6 +24,7 @@ public class SetHashTable implements SetInterface {
         return true;
     }
 
+    //method to check if set contains word
     @Override
     public boolean contains(String word) {
 
@@ -28,26 +32,10 @@ public class SetHashTable implements SetInterface {
         return isPresent;
     }
 
+    //method to get the size of the set
     @Override
     public int size() {
         return hashTable.size();
     }
 
-    /*public static void main(String[] args) {
-        setimplementations.SetHashTable set = new setimplementations.SetHashTable();
-        System.out.println(set.size());
-        System.out.println(set.contains("aaa"));
-        set.add("aaa");
-        System.out.println(set.contains("aaa"));
-        System.out.println(set.size());
-        System.out.println(set.contains("aaa"));
-        System.out.println(set.contains("bbb"));
-        set.add("bbb");
-        System.out.println(set.contains("bbb"));
-        System.out.println(set.size());
-        boolean isadded = set.add("aaa");
-        System.out.println("is aaa added again"+isadded);
-        System.out.println(set.contains("aaa"));
-        System.out.println(set.size());
-    }*/
 }

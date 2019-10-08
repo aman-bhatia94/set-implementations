@@ -1,3 +1,8 @@
+/**
+ * An implementation of Hash Table
+ * Author: Aman Bhatia
+ */
+
 package datastructures;//An implementation of hash table
 import java.lang.Math;
 public class HashTable {
@@ -5,7 +10,9 @@ public class HashTable {
     private int capacity;//capacity of the hash table
     private int size = 0;//size of the hash table
     public HashTable(){
-        capacity = 1019; //prime number
+        //capacity is chosen as a prime number, because using a prime number reduces the number of collisions
+        //source of the above info - stackoverflow.com
+        capacity = 1019;
         lists = new LinkedList[capacity];
         //initialize the linked lists
         for(int index = 0; index < capacity; index++){
@@ -29,12 +36,6 @@ public class HashTable {
         int hashCode = word.hashCode(); //hashcode
         int index = hashCode%this.capacity;
         index = Math.abs(index);
-
-        //checking if a list is created at the index or not
-        /*if(lists[index].size() == 0){
-            //if the linked list is empty at this index then we create it, otherwise we simply add the element
-            lists[index] = new datastructures.LinkedList();
-        }*/
         lists[index].add(word);
         size++;
         return true;
@@ -45,15 +46,11 @@ public class HashTable {
         return search(word);
     }
 
+    //method to search for a word in the hash table
     private boolean search(String word){
         int hashCode = word.hashCode(); //hashcode
         int index = hashCode%this.capacity;
         index = Math.abs(index);
-
-        //internally the linked list methods will now search if this element is present in the  chained list or not
-        /*if(lists[index].size() == 0){
-            return false;
-        }*/
         if(lists[index].contains(word) != null){
             return true;
         }
@@ -66,15 +63,4 @@ public class HashTable {
             System.out.println("--end--  |");
         }
     }
-
-   /* public static void main(String[] args) {
-        datastructures.HashTable ht = new datastructures.HashTable();
-        ht.add("abc");
-        ht.add("abc");
-        ht.add("a");
-        ht.add("b");
-        ht.display();
-        System.out.println(ht.size());
-    }*/
-
 }

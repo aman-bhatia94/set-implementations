@@ -1,11 +1,15 @@
+/**
+ * An implementation of Singly Linked List
+ * Author: Aman Bhatia
+ */
 package datastructures;
 
 public class LinkedList {
     private Node head; //To store the head of the list
     private int size = 0; //keeping count of the list size
     class Node{
-        String word; //value at this node
-        Node next; // pointer to the next
+        String word; //value stored at the node
+        Node next; // pointer to the next node
         Node(String word){ //constructor to initialize node
             this.word = word;
             this.next = null;
@@ -15,6 +19,7 @@ public class LinkedList {
     public int size(){
         return size;
     }
+
     //method to call the search function
     public Node contains(String word){
         return search(this.head,word);
@@ -34,6 +39,7 @@ public class LinkedList {
         }
         return trav;
     }
+
     //method to add an element in the list at the head
     public void add(String word){
         Node temp = new Node(word);
@@ -42,6 +48,7 @@ public class LinkedList {
         size++;
 
     }
+
     //method to call the traversal function
     public void display(){
         traverse(this.head);

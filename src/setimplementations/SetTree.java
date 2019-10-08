@@ -1,5 +1,8 @@
-package setimplementations;
+/**
+ * Implementation of a set using a Tree
+ */
 
+package setimplementations;
 import datastructures.BinaryTree;
 
 public class SetTree implements SetInterface{
@@ -12,6 +15,7 @@ public class SetTree implements SetInterface{
         return bst.size();
     }
 
+    //Searching if the set already contains the given element
     public boolean contains(String word){
         if(bst.contains(word) != null){
             return true;
@@ -19,6 +23,7 @@ public class SetTree implements SetInterface{
         return false;
     }
 
+    //method to add an element into the set
     public boolean add(String word){
         boolean present = contains(word);
         if(present == true)
@@ -27,6 +32,7 @@ public class SetTree implements SetInterface{
         return true;
     }
 
+    //method to display the set
     public void displaySet(){
         if(size() == 0){
             System.out.println("Empty Set");
@@ -36,18 +42,4 @@ public class SetTree implements SetInterface{
         System.out.println();
     }
 
-    /*public static void main(String[] args) {
-        setimplementations.SetTree set = new setimplementations.SetTree();
-        set.displaySet();
-        set.add("b");
-        set.displaySet();
-        set.add("aman");
-        set.displaySet();
-        set.add("a");
-        set.displaySet();
-        set.add("cat");
-        set.displaySet();
-        set.add("c");
-        set.displaySet();
-    }*/
 }
