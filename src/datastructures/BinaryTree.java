@@ -1,6 +1,5 @@
 /**
  * An implementation of Binary Search Tree
- * Author: Aman Bhatia
  */
 package datastructures;
 

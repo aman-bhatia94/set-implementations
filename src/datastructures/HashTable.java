@@ -1,6 +1,5 @@
 /**
  * An implementation of Hash Table
- * Author: Aman Bhatia
  */
 
 package datastructures;//An implementation of hash table

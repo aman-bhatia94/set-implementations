@@ -15,6 +15,7 @@ public class Set {
     }
 
     int tokenizeFlag = 0; //0 represents add and 1 represents search, used in tokenize method
+    //using this flag to avoid writing tokenize subroutine multiple times
 
     //inserting data(words_present vs time) into csv
     public void insert(SetInterface set,String ds){
@@ -34,7 +35,7 @@ public class Set {
         System.out.println("The number of words that don't exist in "+identifier+" is: "+count);
     }
 
-    //method that tokenizes the strings from a file and performs actuall add operations and search
+    //method that tokenizes the strings from a file and performs actual add operations and search
     private int tokenize(SetInterface set,File file, int tokenizeFlag,String ds){
         int count = 0; //for counting the number of words not present in the set
         FileWriter fileWriter = null;
@@ -57,8 +58,6 @@ public class Set {
         }
         try {
             Scanner scanner = new Scanner(file);
-            //fileWriter.append(fileHeader);
-            //fileWriter.append("\n");
             while (scanner.hasNextLine()) {
                 String[] tokens = scanner.nextLine().split("[^a-zA-Z0-9]+");
                 for (String token : tokens) {

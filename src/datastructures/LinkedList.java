@@ -1,6 +1,5 @@
 /**
  * An implementation of Singly Linked List
- * Author: Aman Bhatia
  */
 package datastructures;
 
