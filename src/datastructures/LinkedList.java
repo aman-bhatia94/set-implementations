@@ -4,7 +4,7 @@
 package datastructures;
 
 public class LinkedList {
-    private Node head; //To store the head of the list
+    private Node head; //To store the head of the list, gets set to null
     private int size = 0; //keeping count of the list size
     class Node{
         String word; //value stored at the node
@@ -39,7 +39,7 @@ public class LinkedList {
         return trav;
     }
 
-    //method to add an element in the list at the head
+    //method to add an element in the list at the head O(1) since addition is at the head
     public void add(String word){
         Node temp = new Node(word);
         temp.next = this.head;
@@ -53,7 +53,7 @@ public class LinkedList {
         traverse(this.head);
     }
 
-    //method to traverse the list
+    //method to traverse the list O(n)
     private void traverse(Node head){
         Node trav = head;
         while(trav != null){
@@ -61,6 +61,5 @@ public class LinkedList {
             trav = trav.next;
         }
     }
-
 
 }

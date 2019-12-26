@@ -144,6 +144,8 @@ public class Set {
 
     //main method
     public static void main(String[] args) {
+        //Runs each implementation 10 times, for 10 experiments
+
 
         Set set = new Set();
         SetList setList = new SetList();

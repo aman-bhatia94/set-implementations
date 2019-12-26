@@ -9,7 +9,7 @@ public class HashTable {
     private int capacity;//capacity of the hash table
     private int size = 0;//size of the hash table
     public HashTable(){
-        //capacity is chosen as a prime number, because using a prime number reduces the number of collisions
+        //capacity is chosen as a prime number, because using a prime number reduces the number of collisions, mod operations become easy
         //source of the above info - stackoverflow.com
         capacity = 1019;
         lists = new LinkedList[capacity];
