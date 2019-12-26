@@ -21,4 +21,4 @@ Insertion - O(1), search - O(1).
 
 - Search(Hash Table set) max time -average 332 ns, max time 17954 ns , min 135 ns, std dev - 697.08
 
-
+![alt text](/graph.png)
